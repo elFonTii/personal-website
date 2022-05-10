@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=VT323&display=swap');
+
+:root {
+    --color-primary: #55d447;
+    --color-secondary: #E0D104;
+    --color-tertiary: #F79B11;
+    --color-quaternary: #E02104;
+    --color-quinary: #E205FC;
+    --color-grey: #969696;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* NAVBAR STYLES BEGIN */
+
+div.navbar {
+    background-color: #fff;
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.navbar .navbar-wrapper{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .navbar-brand a{
+    font-size: 1.1rem;
+    font-weight: 900;
+    color: var(--color-primary);
+    text-decoration: none;
+    letter-spacing: 1px;
+    padding: 1rem;
+}
+
+.navbar .navbar-brand a:hover{
+    text-decoration: underline;
+}
+
+.navbar .navbar-inline ul{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    list-style-type: none;
+}
+
+.navbar .navbar-inline ul li.navbar-item{
+    margin-left: 1rem;
+}
+
+.navbar .navbar-inline ul li.navbar-item a{
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    text-decoration: none;
+    letter-spacing: 1px;
+    padding: 1rem;
+}
+
+.navbar .navbar-inline ul li.navbar-item{
+    transition: 200ms ease-in-out;
+}
+
+
+li.navbar-item:hover{
+    transform: scale(1.1);
+}
+
+/* NAVBAR STYLES END */
+
+
+/* HEADER STYLES BEGIN */
+header{
+    background-color: var(--color-primary);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#particles-js{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+header .info-wrapper{
+    width: 90%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header h1{
+    position: relative;
+    font-size: 4rem;
+    color: #fff;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    /*transform: translateY(-50%);  */
+}
+
+.info-wrapper .info-box{
+    width: 450px;
+    height: 270px;
+    position: relative;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.info-wrapper .info-box pre{
+    font-size: 1.3rem;
+    color: var(--color-grey);
+    font-family: 'VT323', monospace;
+    font-weight: 200;
+    margin-left: calc(-120px);
+}
+
+.info-wrapper .info-box pre span{
+    color: var(--color-tertiary);
+    font-family: 'VT323', monospace;
+    font-weight: 200;
+}
+
+.info-wrapper .info-box pre span.value{
+    color: var(--color-quinary);
+    font-family: 'VT323', monospace;
+    font-weight: 200;
+}
+
+.scroll {
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 1;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 2em;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.scroll:hover{
+    background-color: #fff;
+    color: var(--color-primary);
+}
+
+/* HEADER STYLES END */
+
+
+/* TECHNOLOGY SECTION BEING*/
+section#technology {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    align-items: center;
+}
+
+.section-header h1{
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.section-header p{
+    font-size: 1.3rem;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 0;
+}
+/* TECHNOLOGY SECTION END*/
+
+/* ANIMATIONS BEGIN */
+
+.writing-anim{
+    animation:  typewriter 2s steps(22) 1s 1 normal both,
+                blink-text-cursor 500ms steps(24) infinite normal;
+}
+    @keyframes typewriter{
+        from{width: 0;}
+        to{width: 9em;}
+    }
+    @keyframes blink-text-cursor{
+        from{border-right-color: rgba(255,255,255,.75);}
+        to{border-right-color: transparent;}
+    }
+/* ANIMATIONS END */
+
+
+
+
+
+
+/* Media queries */
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+/* Styles */
+    .navbar *{
+        display: none;
+    }
+
+    header h1{
+        font-size: 2rem;
+    }
+
+    .info-wrapper .info-box{
+        width: 250px;
+        height: 150px;
+        position: relative;
+        background: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .info-wrapper .info-box pre{
+        font-size: 1rem;
+        color: var(--color-grey);
+        font-family: 'VT323', monospace;
+        font-weight: 200;
+        margin-left: calc(-113px);
+        transform: translate(0, -14%);
+    }
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (min-width : 321px) {
+    .navbar .navbar-inline ul li.navbar-item a{
+        font-size: .8rem;
+        text-transform: uppercase;
+    }
+/* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 320px) {
+/* Styles */¨
+.navbar *{
+    display: none;
+}
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+/* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+/* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+/* Styles */
+}
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
+}
